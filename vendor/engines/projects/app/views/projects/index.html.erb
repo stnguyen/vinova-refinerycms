@@ -1,11 +1,35 @@
-<% content_for :body_content_left do %>
-  <ul id="projects">
-    <% @projects.each do |project| %>
-      <li>
-        <%= link_to project.name, project_url(project) %>
-      </li>
-    <% end %>
-  </ul>
+<% content_for :body_content_testimonial do %>
+
+	<%= render :partial => 'shared/content_testimonial',
+				:locals => { :testimonials => ["Our featured projects"] } %>
+				
+<% end %>
+
+<% content_for :body_content do %>
+	<div id="content_lower" class="container">
+		<div class="content span-24 last portfolio">	
+			<% ProjectGroup.all.each do |project_group| %>
+				<% next if project_group.projects.count == 0 %>
+				<h1 class="folio-header"><%= project_group.name %></h1>
+				<!-- ============================ -->
+				<% project_group.projects.each do |project| %>
+					<% next unless project.show %>
+					<a title="ruby on rails web development and web design singapore" name="<%= project.friendly_id %>"></a>
+					<div class="span-10">
+						<a title="ruby on rails web development and web design singapore" href="<%= project.url %>" target="_blank"><img alt="ruby on rails web development and web design singapore" class="content-left" src="<%= project.icon.url %>"></a>
+					</div>
+					<div class="span-14 last">
+						<h2><a title="ruby on rails web development and web design singapore" href="<%= project.url %>" target="_blank"><%= project.name %></a></h2>
+						<%= raw project.description %>
+					</div>
+					<hr class="space"><hr class="space">
+
+					<!-- ============================ -->
+				<% end %>
+			<% end %>
+		
+		</div>
+	</div>
 <% end %>
 
 <%= render :partial => "/shared/content_page" %>

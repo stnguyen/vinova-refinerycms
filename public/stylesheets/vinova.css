@@ -408,3 +408,12 @@ img.content-left{
 	display: none;
 }
 
+.portfolio img.content-left{
+	width: 300px;
+}
+
+h1.folio-header{
+	background: #1E90FF;
+	color: #FFF;
+	padding:  5px 20px;
+}

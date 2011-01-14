@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110114165437) do
+ActiveRecord::Schema.define(:version => 20110114171048) do
 
   create_table "images", :force => true do |t|
     t.string   "image_mime_type"
@@ -103,6 +103,8 @@ ActiveRecord::Schema.define(:version => 20110114165437) do
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "show"
+    t.string   "url"
   end
 
   add_index "projects", ["id"], :name => "index_projects_on_id"
