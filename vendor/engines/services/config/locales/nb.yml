@@ -1,0 +1,19 @@
+nb:
+  plugins:
+    services:
+      title: Services
+  admin:
+    services:
+      index:
+        create_new: Lag en ny Service
+        reorder: Endre rekkefølgen på Services
+        reorder_done: Ferdig å endre rekkefølgen Services
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Services enda. Klikk på "Lag en ny Service" for å legge til din første service.
+      service:
+        view_live: Vis hvordan denne service ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne service
+        delete: Fjern denne service permanent
+  services:
+    show:
+      other: Andre Services

@@ -1,0 +1,17 @@
+<div id="header">
+	<div class="container">
+		<div id="logo" class="span-7"><a href="<%=root_path%>"><span>Vinova logo</span></a></div>
+		<div id="menu" class="span-17 last">
+			<ul>
+				<li <%="class='selected'" if request.path == root_path %>><a href="<%=root_path%>"><span>Home</span></a></li>
+				<li <%="class='selected'" if request.path =~ /services/%>><a href="/services"><span>Services</span></a></li>
+				<li <%="class='selected'" if request.path =~ /portfolio/%>><a href="/portfolio"><span>Portfolio</span></a></li>
+        <li <%="class='selected'" if request.path =~ /partners/%>><a href="/partners"><span>Partners</span></a></li>
+        		<li <%="class='selected'" if request.path =~ /blog/%>><a href="http://blog.vinova.sg"><span>Blog</span></a></li>
+		        <!-- <li <%="class='selected'" if request.path =~ /feeds_corner/%>><a href="/feeds_corner"><span>News</span></a></li> -->
+
+				<li <%="class='selected'" if request.path =~ /contact/ or request.path =~ /send_email/ %>><a href="/contact"><span>Contact</span></a></li>
+			</ul>
+		</div>
+	</div>
+</div>

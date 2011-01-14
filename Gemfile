@@ -51,3 +51,5 @@ gem 'refinerycms-i18n',         '~> 0.9'
 # USER DEFINED
 
 # END USER DEFINED
+
+gem 'refinerycms-services', '1.0', :path => 'vendor/engines', :require => 'services'
