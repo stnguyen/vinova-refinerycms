@@ -1,0 +1,23 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    project_groups:
+      title: Project Groups
+  admin:
+    project_groups:
+      index:
+        create_new: Create a new Project Group
+        reorder: Reorder Project Groups
+        reorder_done: Done Reordering Project Groups
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Project Groups yet. Click "Create a new Project Group" to add your first project group.
+      project_group:
+        view_live: View this project group live <br/><em>(opens in a new window)</em>
+        edit: Edit this project group
+        delete: Remove this project group forever
+  project_groups:
+    show:
+      other: Other Project Groups

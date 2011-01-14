@@ -1,0 +1,39 @@
+<% form_for [:admin, @project] do |f| -%>
+  <%= render :partial => "/shared/admin/error_messages", :locals => {
+    :object => @project,
+    :include_object_name => true
+  } %>
+  
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest' -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :icon -%>
+    <%= render :partial => "/shared/admin/image_picker", :locals => {
+      :f => f,
+      :field => :icon_id,
+      :image => @project.icon,
+      :toggle_image_display => false
+    } %>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :project_group_id -%>
+    <%= f.text_field :project_group_id -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :description -%>
+    <%= f.text_area :description, :rows => 20, :class => 'wymeditor widest' -%>
+  </div>
+  
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => false,
+                :delete_title => t('admin.projects.project.delete'),
+                :delete_confirmation => t('shared.admin.delete.message', :title => @project.name)
+              } %>
+<% end -%>

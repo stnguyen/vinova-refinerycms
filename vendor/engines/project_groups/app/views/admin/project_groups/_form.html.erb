@@ -1,0 +1,19 @@
+<% form_for [:admin, @project_group] do |f| -%>
+  <%= render :partial => "/shared/admin/error_messages", :locals => {
+    :object => @project_group,
+    :include_object_name => true
+  } %>
+  
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest' -%>
+  </div>
+  
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => false,
+                :delete_title => t('admin.project_groups.project_group.delete'),
+                :delete_confirmation => t('shared.admin.delete.message', :title => @project_group.name)
+              } %>
+<% end -%>

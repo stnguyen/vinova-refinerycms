@@ -1,0 +1,19 @@
+nl:
+  plugins:
+    project_groups:
+      title: Project Groups
+  admin:
+    project_groups:
+      index:
+        create_new: Maak een nieuwe Project Group
+        reorder: Wijzig de volgorde van de Project Groups
+        reorder_done: Klaar met het wijzingen van de volgorde van de Project Groups
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Project Groups. Druk op 'Maak een nieuwe Project Group' om de eerste aan te maken.
+      project_group:
+        view_live: Bekijk deze project group op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze project group
+        delete: Verwijder deze project group voor eeuwig
+  project_groups:
+    show:
+      other: Andere Project Groups

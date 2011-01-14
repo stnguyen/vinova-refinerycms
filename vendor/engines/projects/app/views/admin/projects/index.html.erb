@@ -1,0 +1,67 @@
+<div id='actions'>
+  <ul>
+    <% if Admin::ProjectsController.searchable? %>
+      <li>
+        <%= render :partial => "/shared/admin/search",
+                    :locals => {
+                      :url => admin_projects_url
+                    } %>
+      </li>
+    <% end %>
+    <li>
+      <%= link_to t('.create_new'), new_admin_project_url,
+                   :class => "add_icon" %>
+    </li>
+  <% if !searching? and Project.count > 1 and Admin::ProjectsController.sortable? %>
+    <li>
+      <%= link_to t('.reorder', :what => "Projects"),
+                   admin_projects_url,
+                   :id => "reorder_action",
+                   :class => "reorder_icon" %>
+
+      <%= link_to t('.reorder_done', :what => "Projects"),
+                   admin_projects_url,
+                   :id => "reorder_action_done",
+                   :style => "display: none;",
+                   :class => "reorder_icon" %>
+    </li>
+  <% end %>
+  </ul>
+</div>
+<div id='records'>
+  <% if searching? %>
+    <h2><%= t('shared.admin.search.results_for', :query => params[:search]) %></h2>
+    <% if @projects.any? %>
+      <%= will_paginate @projects, :previous_label => '&laquo;', :next_label => '&raquo;' %>
+      <ul>
+        <%= render :partial => "project",
+                    :collection => @projects %>
+      </ul>
+      <%= will_paginate @projects, :previous_label => '&laquo;', :next_label => '&raquo;' %>
+    <% else %>
+      <p><%= t('shared.admin.search.no_results') %></p>
+    <% end %>
+  <% else %>
+    <% if @projects.any? %>
+      <%= will_paginate @projects,
+                         :previous_label => '&laquo;',
+                         :next_label => '&raquo;' %>
+
+      <%= render :partial => "sortable_list" %>
+
+      <%= will_paginate @projects,
+                         :previous_label => '&laquo;',
+                         :next_label => '&raquo;' %>
+    <% else %>
+      <p>
+        <strong>
+          <%= t('.no_items_yet') %>
+        </strong>
+      </p>
+    <% end %>
+  <% end %>
+</div>
+<%= render :partial => "/shared/admin/make_sortable",
+            :locals => {
+              :tree => false
+            } if !searching? and Project.count > 1 %>

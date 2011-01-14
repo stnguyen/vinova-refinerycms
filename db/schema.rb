@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110114144622) do
+ActiveRecord::Schema.define(:version => 20110114165437) do
 
   create_table "images", :force => true do |t|
     t.string   "image_mime_type"
@@ -86,26 +86,26 @@ ActiveRecord::Schema.define(:version => 20110114144622) do
   add_index "pages", ["parent_id"], :name => "index_pages_on_parent_id"
   add_index "pages", ["rgt"], :name => "index_pages_on_rgt"
 
-  create_table "project_portfolio_types", :force => true do |t|
-    t.string   "type_name"
+  create_table "project_groups", :force => true do |t|
+    t.string   "name"
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "project_portfolio_types", ["id"], :name => "index_project_portfolio_types_on_id"
+  add_index "project_groups", ["id"], :name => "index_project_groups_on_id"
 
-  create_table "project_portfolios", :force => true do |t|
-    t.string   "title"
-    t.integer  "project_portfolio_type_id"
+  create_table "projects", :force => true do |t|
+    t.string   "name"
     t.integer  "icon_id"
+    t.integer  "project_group_id"
     t.text     "description"
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "project_portfolios", ["id"], :name => "index_project_portfolios_on_id"
+  add_index "projects", ["id"], :name => "index_projects_on_id"
 
   create_table "refinery_settings", :force => true do |t|
     t.string   "name"

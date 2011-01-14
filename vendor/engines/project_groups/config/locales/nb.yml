@@ -1,0 +1,19 @@
+nb:
+  plugins:
+    project_groups:
+      title: Project Groups
+  admin:
+    project_groups:
+      index:
+        create_new: Lag en ny Project Group
+        reorder: Endre rekkefølgen på Project Groups
+        reorder_done: Ferdig å endre rekkefølgen Project Groups
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Project Groups enda. Klikk på "Lag en ny Project Group" for å legge til din første project group.
+      project_group:
+        view_live: Vis hvordan denne project group ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne project group
+        delete: Fjern denne project group permanent
+  project_groups:
+    show:
+      other: Andre Project Groups

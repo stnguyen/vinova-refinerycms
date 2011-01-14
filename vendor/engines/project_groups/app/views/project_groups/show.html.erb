@@ -1,0 +1,25 @@
+<% content_for :body_content_title do %>
+  <%= @project_group.name %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  
+  <div>
+    <h3>Name</h3>
+    <%=raw @project_group.name %>
+  </div>
+  
+<% end %>
+
+<% content_for :body_content_right do %>
+  <h2><%= t('.other') %></h2>
+  <ul id="project_groups">
+    <% @project_groups.each do |project_group| %>
+      <li>
+        <%= link_to project_group.name, project_group_url(project_group) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>
