@@ -1,0 +1,36 @@
+<div id="content_upper" class="container">
+	<div class="content span-24 last">
+		<div id="description" class="span-12">
+			<div class="text border">
+				<span>
+					Vinova provides <b>cost-effective</b> web development services and solutions to small and medium-sized businesses throughout the world. We offer a full spectrum of <b>web development services</b> and solutions tailored to the needs of our clients. Web solutions developed by Vinova are <b>affordable</b>, <b>user-friendly</b> and <b>completely customizable</b>.<br /><br /> Let us give your websites a new look, drive traffic to it and <b>generate revenue</b> for your business.       
+				</span>
+			</div>
+		</div>
+		<div id="summary" class="span-12 last">
+			<div class="span-6">
+			  <b>Our Premium Services:</b><br />
+			  <ul>
+          <li><a style="float:none;"href="/services#agile-web-development-ruby-on-rails">Web Design & Development</a></li>
+          <li><a style="float:none;"href="/services#content-management-system-easy-to-manage-your-website-content">Content Management System </a></li>
+          <li><a style="float:none;"href="/services#e-commerce-solution-for-manufacturers-and-retailers">e-Commerce Solution</a></li>
+          <li><a style="float:none;"href="/services#web-design-consulting-maintenance-services">Maintenance & Hosting</a></li>
+          <li><a style="float:none;"href="/services#iphone-application-development">iPhone Apps Development</a></li>
+          <li><a style="float:none;"href="/services#facebook-twitter-application-development">Facebook & Twitter Apps</a></li>
+        </ul>  
+				<a href="/contact" class="view_bttn">Work with us</a>
+			</div>
+
+			<% if request.path =~ /services/ %>
+				<div class="span-6 last"><img src="/images/services.png"></div>
+			<% elsif request.path =~ /portfolio/ %>
+				<div class="span-6 last"><img src="/images/folio.png"></div>
+			<% else %>			
+				<div class="span-6 last"><img src="/images/aboutus.png"></div>			
+			<% end %>			
+			<span>
+					
+			</span>
+		</div>
+	</div>
+</div>
