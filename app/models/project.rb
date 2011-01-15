@@ -7,6 +7,7 @@ class Project < ActiveRecord::Base
   validates_presence_of :project_group_id
   
   belongs_to :icon, :class_name => 'Image'
+  belongs_to :icon_small, :class_name => 'Image'  
   belongs_to :project_group
 
 end

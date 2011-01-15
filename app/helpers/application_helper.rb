@@ -24,4 +24,15 @@ module ApplicationHelper
     end
     a
   end
+  
+  def project_small_image_url(project)
+    if project.icon_small
+      project.icon_small.url
+    else
+      if project.icon
+        project.icon.url
+      else ''
+      end
+    end
+  end
 end

@@ -14,13 +14,13 @@
 				<h1 class="folio-header"><%= project_group.name %></h1>
 				<!-- ============================ -->
 				<% project_group.projects.each do |project| %>
-					<% next unless project.show %>
+					<% next unless project.show_portfolio %>
 					<a title="ruby on rails web development and web design singapore" name="<%= project.friendly_id %>"></a>
 					<div class="span-10">
-						<a title="ruby on rails web development and web design singapore" href="<%= project.url %>" target="_blank"><img alt="ruby on rails web development and web design singapore" class="content-left" src="<%= project.icon.url %>"></a>
+						<a title="ruby on rails web development and web design singapore" href="<%= project.url %>" target="_blank"><img alt="ruby on rails web development and web design singapore" class="content-left" src="<%= project_small_image_url project %>"></a>
 					</div>
 					<div class="span-14 last">
-						<h2><a title="ruby on rails web development and web design singapore" href="<%= project.url %>" target="_blank"><%= project.name %></a></h2>
+						<h2><a title="ruby on rails web development and web design singapore" href="<%= project.url %>" target="_blank"><%= project.short_description %></a></h2>
 						<%= raw project.description %>
 					</div>
 					<hr class="space"><hr class="space">

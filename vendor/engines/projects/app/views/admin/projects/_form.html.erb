@@ -9,13 +9,18 @@
     <%= f.text_field :name, :class => 'larger widest' -%>
   </div>
 
+	<div class='field'>
+    <%= f.label :short_description, "Short description. This description will be used as the project header in portfolio page and in the slide in the homepage" -%>
+    <%= f.text_field :short_description -%>
+  </div>
+
   <div class='field'>
     <%= f.label :url -%>
-    <%= f.text_field :url, :class => 'larger widest' -%>
+    <%= f.text_field :url -%>
   </div>
   
   <div class='field'>
-    <%= f.label :icon -%>
+    <%= f.label :icon, "Large image. This image will be used in the slide on the home page" -%>
     <%= render :partial => "/shared/admin/image_picker", :locals => {
       :f => f,
       :field => :icon_id,
@@ -23,16 +28,27 @@
       :toggle_image_display => false
     } %>
   </div>
+
+	<div class='field'>
+    <%= f.label :icon_small, "Small image. This image will be used in portfolio page" -%>
+    <%= render :partial => "/shared/admin/image_picker", :locals => {
+      :f => f,
+      :field => :icon_small_id,
+      :image => @project.icon_small,
+      :toggle_image_display => false
+    } %>
+  </div>
   
   <div class='field'>
     <%= f.label :project_group_id -%>
     <%= f.collection_select(:project_group_id, ProjectGroup.find(:all), :id, :name, 
-														options ={:prompt => "-Select a project group"}, :class =>"larger widest") -%>
+														options ={:prompt => "-Select a project group"}) -%>
   </div>
   
 	<div class="field">
-		 <%= f.label :show -%>
-    <%= f.check_box :show, :class => 'larger'-%>show me on the portfolio page
+	 	<%= f.label :show_portfolio -%>
+    <%= f.check_box :show_portfolio -%>show me on the portfolio page
+    <%= f.check_box :show_slide -%>show me in the slide in the home page
   </div>
 
   <div class='field'>
