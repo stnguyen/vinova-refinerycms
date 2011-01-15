@@ -5,7 +5,7 @@
 
   sections = [
     #{:yield => :body_content_title, :fallback => page_title, :id => 'body_content_page_title', :title => true},
-    {:yield => :body_content_testimonial, :fallback => (@page.present? ? @page[Page.default_parts.first.to_sym] : nil)},
+    {:yield => :body_content_upper, :fallback => (@page.present? ? @page[Page.default_parts.first.to_sym] : nil)},
     {:yield => :body_content, :fallback => (@page.present? ? @page[Page.default_parts.second.to_sym] : nil)}
   ].reject {|section| hide_sections.include?(section[:yield]) }
 

@@ -16,4 +16,12 @@ module ApplicationHelper
       "Vinova Singapore | CMS | eCommerce | Web Design and Development Company | Ruby on Rails"
     end
   end
+  
+  def testimonials_array
+    a = []
+    Testimonial.all.each do |t|
+      a << "<quote><a href=\"#\">\"#{t.content}\"<br/>#{t.author}</a></quote>"
+    end
+    a
+  end
 end

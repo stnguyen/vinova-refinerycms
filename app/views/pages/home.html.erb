@@ -1,60 +1,50 @@
-<%= javascript_include_tag 'home'%>
-	
-<div id="page_title">
-	<div class="page_title_left"></div>
-	<div class="container">
-		<div class="inner">
-			<div>
-				<quote>
-					<a href="#">
-						<span id="testimonial_content"></span><br/>
-						<span id="testimonial_author"></span>
-					</a>
-				</quote>
-			</div>
-		</div>
-	</div>
-	<div class="page_title_right"></div>
-</div>
+<% content_for :body_content_upper do %>
+	<%= render :partial => "home_upper" %>
 
-<div id="content_lower" class="container">
-	<div class="content span-24 last">	
-		<h2>Featured Web Development Projects</h2>
-    <div id='slider' class="nivoSlider">
-  			<a title="ruby on rails web development and web design singapore" href="/portfolio#dealslip"><img alt="ruby on rails web development and web design singapore" src="/images/prj/dealslip.jpg"  title="CouponEngine - dealslip.com"></a>
+	<%= render :partial => 'shared/content_testimonial',
+				:locals => { :testimonials => testimonials_array } %>
+				
+<% end %>
 
-  			<a title="ruby on rails web development and web design singapore" href="/portfolio#gotrendy">    <img alt="ruby on rails web development and web design singapore" src="/images/prj/gotrendy.jpg"  title="Go-Trendy Online Ladies Fashion Shop - go-trendy.com">    </a>
+<% content_for :body_content do %>
+	<%= javascript_include_tag 'home'%>
 
-        <a  title="ruby on rails web development and web design singapore" href="/portfolio#vncrafts"><img alt="ruby on rails web development and web design singapore" src="/images/prj/vncrafts.png"  title="VnCrafts.com | Art & Handcrafts from Vietnam. Lacquerware - Wood Works ‚Äì Embroideries - Home Decors"></a>
+	<div id="content_lower" class="container">
+		<div class="content span-24 last">	
+			<h2>Featured Web Development Projects</h2>
+	    <div id='slider' class="nivoSlider">
+	  			<a title="ruby on rails web development and web design singapore" href="/portfolio#dealslip"><img alt="ruby on rails web development and web design singapore" src="/images/prj/dealslip.jpg"  title="CouponEngine - dealslip.com"></a>
+
+	  			<a title="ruby on rails web development and web design singapore" href="/portfolio#gotrendy">    <img alt="ruby on rails web development and web design singapore" src="/images/prj/gotrendy.jpg"  title="Go-Trendy Online Ladies Fashion Shop - go-trendy.com">    </a>
+
+	        <a  title="ruby on rails web development and web design singapore" href="/portfolio#vncrafts"><img alt="ruby on rails web development and web design singapore" src="/images/prj/vncrafts.png"  title="VnCrafts.com | Art & Handcrafts from Vietnam. Lacquerware - Wood Works ‚Äì Embroideries - Home Decors"></a>
       			
-  			<a title="ruby on rails web development and web design singapore" href="/portfolio#coupongurus"> <img alt="ruby on rails web development and web design singapore" src="/images/prj/coupongurus.jpg"  title="CouponEngine - coupongurus.com"> </a>
+	  			<a title="ruby on rails web development and web design singapore" href="/portfolio#coupongurus"> <img alt="ruby on rails web development and web design singapore" src="/images/prj/coupongurus.jpg"  title="CouponEngine - coupongurus.com"> </a>
 
-  			<a title="ruby on rails web development and web design singapore" href="/portfolio#greenganic">  <img alt="ruby on rails web development and web design singapore" src="/images/prj/greenganic.jpg"  title="GreenGanic Fertilizer Online Shopping - greenganic.com">  </a>	
+	  			<a title="ruby on rails web development and web design singapore" href="/portfolio#greenganic">  <img alt="ruby on rails web development and web design singapore" src="/images/prj/greenganic.jpg"  title="GreenGanic Fertilizer Online Shopping - greenganic.com">  </a>	
 						
-  			<a title="ruby on rails web development and web design singapore" href="/portfolio#vouchergurus"><img alt="ruby on rails web development and web design singapore" src="/images/prj/vouchergurus.jpg"  title="CouponEngine - vouchergurus.co.uk"></a>
+	  			<a title="ruby on rails web development and web design singapore" href="/portfolio#vouchergurus"><img alt="ruby on rails web development and web design singapore" src="/images/prj/vouchergurus.jpg"  title="CouponEngine - vouchergurus.co.uk"></a>
 
-        <a  title="ruby on rails web development and web design singapore" href="/portfolio#khaitam"><img alt="ruby on rails web development and web design singapore" src="/images/prj/khaitam.png"  title="Khaitam Lacquerware | Art & Handcrafts from Vietnam. Lacquerware - Wood Works ‚Äì Embroideries - Home Decors"></a>
+	        <a  title="ruby on rails web development and web design singapore" href="/portfolio#khaitam"><img alt="ruby on rails web development and web design singapore" src="/images/prj/khaitam.png"  title="Khaitam Lacquerware | Art & Handcrafts from Vietnam. Lacquerware - Wood Works ‚Äì Embroideries - Home Decors"></a>
 			
-  			<a title="ruby on rails web development and web design singapore" href="/portfolio#bustacard">   <img alt="ruby on rails web development and web design singapore" src="/images/prj/bustacard.jpg"  title="Coupon Engine - Bust a Card - BustaCard.com">   </a>
+	  			<a title="ruby on rails web development and web design singapore" href="/portfolio#bustacard">   <img alt="ruby on rails web development and web design singapore" src="/images/prj/bustacard.jpg"  title="Coupon Engine - Bust a Card - BustaCard.com">   </a>
 
-  			<a title="ruby on rails web development and web design singapore" href="/portfolio#offstock">    <img alt="ruby on rails web development and web design singapore" src="/images/prj/offstock.png"  title="Offstock.com - Excess Chemical Exchange - B2B Trading platform">    </a>
+	  			<a title="ruby on rails web development and web design singapore" href="/portfolio#offstock">    <img alt="ruby on rails web development and web design singapore" src="/images/prj/offstock.png"  title="Offstock.com - Excess Chemical Exchange - B2B Trading platform">    </a>
 
-  			<a title="ruby on rails web development and web design singapore" href="/portfolio#ilovehalien">    <img alt="ruby on rails web development and web design singapore" src="/images/prj/ilovehalien.jpg"  title="News Feeds - ilovehalien.com">    </a>		
+	  			<a title="ruby on rails web development and web design singapore" href="/portfolio#ilovehalien">    <img alt="ruby on rails web development and web design singapore" src="/images/prj/ilovehalien.jpg"  title="News Feeds - ilovehalien.com">    </a>		
 						
-  			<a title="ruby on rails web development and web design singapore" href="/portfolio#gord">        <img alt="ruby on rails web development and web design singapore" src="/images/prj/gord.jpg"  title="Gord Cooke CMS - gordcooke.com">        </a>
+	  			<a title="ruby on rails web development and web design singapore" href="/portfolio#gord">        <img alt="ruby on rails web development and web design singapore" src="/images/prj/gord.jpg"  title="Gord Cooke CMS - gordcooke.com">        </a>
 		
-  			<a title="ruby on rails web development and web design singapore" href="/portfolio#resman">      <img alt="ruby on rails web development and web design singapore" src="/images/prj/resman.jpg"  title="Long Term Care Software On Demand - resman.us">      </a>
+	  			<a title="ruby on rails web development and web design singapore" href="/portfolio#resman">      <img alt="ruby on rails web development and web design singapore" src="/images/prj/resman.jpg"  title="Long Term Care Software On Demand - resman.us">      </a>
 			
-        <a title="ruby on rails web development and web design singapore" href="/portfolio#mauipropertyindex" > <img alt="ruby on rails web development and web design singapore" src="/images/prj/mauipropertyindex.jpg"  title="Maui Property Index  - mauipropertyindex.com"></a>
+	        <a title="ruby on rails web development and web design singapore" href="/portfolio#mauipropertyindex" > <img alt="ruby on rails web development and web design singapore" src="/images/prj/mauipropertyindex.jpg"  title="Maui Property Index  - mauipropertyindex.com"></a>
 
-        <a  title="ruby on rails web development and web design singapore" href="/portfolio#granduraliving"><img alt="ruby on rails web development and web design singapore" src="/images/prj/granduraliving.jpg"  title="Grandura - Federal Energy Tax Credit - granduraliving.com"></a>           
+	        <a  title="ruby on rails web development and web design singapore" href="/portfolio#granduraliving"><img alt="ruby on rails web development and web design singapore" src="/images/prj/granduraliving.jpg"  title="Grandura - Federal Energy Tax Credit - granduraliving.com"></a>           
 
-		</div>
+			</div>
     
+		</div>
 	</div>
-</div>
-
-
-
+<% end %>
 
 <%= render :partial => "/shared/content_page" %>
