@@ -1,0 +1,19 @@
+nb:
+  plugins:
+    partners:
+      title: Partners
+  admin:
+    partners:
+      index:
+        create_new: Lag en ny Partner
+        reorder: Endre rekkefølgen på Partners
+        reorder_done: Ferdig å endre rekkefølgen Partners
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Partners enda. Klikk på "Lag en ny Partner" for å legge til din første partner.
+      partner:
+        view_live: Vis hvordan denne partner ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne partner
+        delete: Fjern denne partner permanent
+  partners:
+    show:
+      other: Andre Partners

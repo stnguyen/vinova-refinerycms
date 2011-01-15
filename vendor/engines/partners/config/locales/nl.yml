@@ -1,0 +1,19 @@
+nl:
+  plugins:
+    partners:
+      title: Partners
+  admin:
+    partners:
+      index:
+        create_new: Maak een nieuwe Partner
+        reorder: Wijzig de volgorde van de Partners
+        reorder_done: Klaar met het wijzingen van de volgorde van de Partners
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Partners. Druk op 'Maak een nieuwe Partner' om de eerste aan te maken.
+      partner:
+        view_live: Bekijk deze partner op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze partner
+        delete: Verwijder deze partner voor eeuwig
+  partners:
+    show:
+      other: Andere Partners

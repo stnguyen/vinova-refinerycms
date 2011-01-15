@@ -1,6 +1,7 @@
 PATH
   remote: vendor/engines
   specs:
+    refinerycms-partners (1.0)
     refinerycms-project_groups (1.0)
     refinerycms-projects (1.0)
     refinerycms-services (1.0)
@@ -115,6 +116,7 @@ DEPENDENCIES
   refinerycms (~> 0.9.8.9)
   refinerycms-i18n (~> 0.9)
   refinerycms-inquiries (~> 0.9)
+  refinerycms-partners (= 1.0)!
   refinerycms-project_groups (= 1.0)!
   refinerycms-projects (= 1.0)!
   refinerycms-services (= 1.0)!

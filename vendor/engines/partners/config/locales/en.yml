@@ -1,0 +1,23 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    partners:
+      title: Partners
+  admin:
+    partners:
+      index:
+        create_new: Create a new Partner
+        reorder: Reorder Partners
+        reorder_done: Done Reordering Partners
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Partners yet. Click "Create a new Partner" to add your first partner.
+      partner:
+        view_live: View this partner live <br/><em>(opens in a new window)</em>
+        edit: Edit this partner
+        delete: Remove this partner forever
+  partners:
+    show:
+      other: Other Partners
