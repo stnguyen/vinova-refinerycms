@@ -8,7 +8,12 @@
     <%= f.label :name -%>
     <%= f.text_field :name, :class => 'larger widest' -%>
   </div>
-  
+
+  <div class='field'>
+    <%= f.label :url -%>
+    <%= f.text_field :url, :class => 'larger widest' -%>
+  </div>
+
   <div class='field'>
     <%= f.label :icon -%>
     <%= render :partial => "/shared/admin/image_picker", :locals => {
@@ -18,7 +23,12 @@
       :toggle_image_display => false
     } %>
   </div>
-  
+
+  <div class="field">
+		<%= f.label :show -%>
+    <%= f.check_box :show, :class => 'larger'-%>show me on the portfolio page
+  </div>
+
   <div class='field'>
     <%= f.label :description -%>
     <%= f.text_area :description, :rows => 20, :class => 'wymeditor widest' -%>

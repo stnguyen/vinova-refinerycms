@@ -1,11 +1,38 @@
-<% content_for :body_content_left do %>
-  <ul id="partners">
-    <% @partners.each do |partner| %>
-      <li>
-        <%= link_to partner.name, partner_url(partner) %>
-      </li>
-    <% end %>
-  </ul>
+<% content_for :body_content_testimonial do %>
+	<%= render :partial => "/shared/content_upper" %>
+	<%= render :partial => 'shared/content_testimonial',
+				:locals => { :testimonials => ["Our featured projects"] } %>
+				
+<% end %>
+
+<% content_for :body_content do %>
+	<div id="content_lower" class="container">
+		<div class="content span-24 last">	
+			<% @partners.each do |partner| %>
+				<% next unless partner.show %>
+				
+				<div class="span-10">
+					<% if partner.url %><a href="<%= partner.url %>" target="_blank"><% end %>
+						<img width="300" class="content-left" src="<%= partner.icon.url %>" title="Anideo Singapore - Eduardo Saverin" alt="Anideo Singapore Eduardo Saverin">
+					<% if partner.url %></a><% end %>
+				</div>
+				<div class="span-14 last">
+					<h2>
+						<% if partner.url %>
+							<a href="<%= partner.url %>" target="_blank" title="<%= partner.name %>">
+						<% end %>
+							<%= partner.name %>
+						<% if partner.url %></a><% end %>
+					</h2>
+
+					<%= raw partner.description %>
+				</div>
+				<hr class="space"><hr class="space">
+				
+				<!-- ============================ -->
+			<% end %>
+		</div>
+	</div>
 <% end %>
 
 <%= render :partial => "/shared/content_page" %>

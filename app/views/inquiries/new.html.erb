@@ -1,0 +1,43 @@
+<% content_for :body_content_testimonial do %>
+	<%= render :partial => "contact_upper" %>
+	<%= render :partial => 'shared/content_testimonial',
+				:locals => { :testimonials => ["Contact us"] } %>
+				
+<% end %>
+
+<% content_for :body_content do %>
+  <div id="content_lower" class="container">
+		<div class="content span-24 last" id="div-cform">	
+    <%= form_for @inquiry, :html => { :id => 'contactform' } do |f| %>
+      <%= render :partial => "/shared/admin/error_messages",
+                 :locals => {
+                   :object => @inquiry,
+                   :include_object_name => true
+                 } %>
+
+
+      <div class='form-item'>
+        <%= f.required_label :name %>
+        <%= f.text_field :name, :size => 60 %>
+      </div>
+      <div class='form-item'>
+        <%= f.required_label :email %>
+        <%= f.text_field :email, :size => 60 %>
+      </div>
+      <div class='form-item'>
+        <%= f.label :phone %>
+        <%= f.text_field :phone, :size => 60 %>
+      </div>
+      <div class='form-item'>
+        <%= f.required_label :message  %>
+        <%= f.text_area :message, :rows => 8, :size => 60 %>
+      </div>
+      <div class='form-buttons'>
+        <%= f.submit t('.send') %>
+      </div>
+    <% end %>
+		</div>
+  </div>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

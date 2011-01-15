@@ -1,0 +1,17 @@
+<% content_for :body_content_testimonial do %>
+	<%= render :partial => "contact_upper" %>
+	
+	<%= render :partial => 'shared/content_testimonial',
+				:locals => { :testimonials => ["Contact us"] } %>
+				
+<% end %>
+
+<% content_for :body_content do %>
+	<div id="content_lower" class="container">
+		<div class="content span-24 last" id="sent">
+			<%= raw @page[Page.default_parts.first.to_sym] %>
+		</div>
+	</div>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>
