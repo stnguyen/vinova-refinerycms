@@ -56,3 +56,4 @@ gem 'refinerycms-services', '1.0', :path => 'vendor/engines', :require => 'servi
 gem 'refinerycms-project_groups', '1.0', :path => 'vendor/engines', :require => 'project_groups'
 gem 'refinerycms-projects', '1.0', :path => 'vendor/engines', :require => 'projects'
 gem 'refinerycms-partners', '1.0', :path => 'vendor/engines', :require => 'partners'
+gem 'refinerycms-testimonials', '1.0', :path => 'vendor/engines', :require => 'testimonials'

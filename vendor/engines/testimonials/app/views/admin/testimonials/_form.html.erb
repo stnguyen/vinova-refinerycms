@@ -1,0 +1,24 @@
+<% form_for [:admin, @testimonial] do |f| -%>
+  <%= render :partial => "/shared/admin/error_messages", :locals => {
+    :object => @testimonial,
+    :include_object_name => true
+  } %>
+  
+  <div class='field'>
+    <%= f.label :content -%>
+    <%= f.text_field :content, :class => 'larger widest' -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :author -%>
+    <%= f.text_field :author -%>
+  </div>
+  
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => false,
+                :delete_title => t('admin.testimonials.testimonial.delete'),
+                :delete_confirmation => t('shared.admin.delete.message', :title => @testimonial.content)
+              } %>
+<% end -%>

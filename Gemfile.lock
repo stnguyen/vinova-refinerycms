@@ -5,6 +5,7 @@ PATH
     refinerycms-project_groups (1.0)
     refinerycms-projects (1.0)
     refinerycms-services (1.0)
+    refinerycms-testimonials (1.0)
 
 GEM
   remote: http://rubygems.org/
@@ -120,4 +121,5 @@ DEPENDENCIES
   refinerycms-project_groups (= 1.0)!
   refinerycms-projects (= 1.0)!
   refinerycms-services (= 1.0)!
+  refinerycms-testimonials (= 1.0)!
   sqlite3-ruby

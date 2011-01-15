@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="testimonials">
+    <% @testimonials.each do |testimonial| %>
+      <li>
+        <%= link_to testimonial.content, testimonial_url(testimonial) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

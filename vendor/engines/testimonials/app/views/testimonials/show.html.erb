@@ -1,0 +1,30 @@
+<% content_for :body_content_title do %>
+  <%= @testimonial.content %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  
+  <div>
+    <h3>Content</h3>
+    <%=raw @testimonial.content %>
+  </div>
+  
+  <div>
+    <h3>Author</h3>
+    <%=raw @testimonial.author %>
+  </div>
+  
+<% end %>
+
+<% content_for :body_content_right do %>
+  <h2><%= t('.other') %></h2>
+  <ul id="testimonials">
+    <% @testimonials.each do |testimonial| %>
+      <li>
+        <%= link_to testimonial.content, testimonial_url(testimonial) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

@@ -1,0 +1,67 @@
+<div id='actions'>
+  <ul>
+    <% if Admin::TestimonialsController.searchable? %>
+      <li>
+        <%= render :partial => "/shared/admin/search",
+                    :locals => {
+                      :url => admin_testimonials_url
+                    } %>
+      </li>
+    <% end %>
+    <li>
+      <%= link_to t('.create_new'), new_admin_testimonial_url,
+                   :class => "add_icon" %>
+    </li>
+  <% if !searching? and Testimonial.count > 1 and Admin::TestimonialsController.sortable? %>
+    <li>
+      <%= link_to t('.reorder', :what => "Testimonials"),
+                   admin_testimonials_url,
+                   :id => "reorder_action",
+                   :class => "reorder_icon" %>
+
+      <%= link_to t('.reorder_done', :what => "Testimonials"),
+                   admin_testimonials_url,
+                   :id => "reorder_action_done",
+                   :style => "display: none;",
+                   :class => "reorder_icon" %>
+    </li>
+  <% end %>
+  </ul>
+</div>
+<div id='records'>
+  <% if searching? %>
+    <h2><%= t('shared.admin.search.results_for', :query => params[:search]) %></h2>
+    <% if @testimonials.any? %>
+      <%= will_paginate @testimonials, :previous_label => '&laquo;', :next_label => '&raquo;' %>
+      <ul>
+        <%= render :partial => "testimonial",
+                    :collection => @testimonials %>
+      </ul>
+      <%= will_paginate @testimonials, :previous_label => '&laquo;', :next_label => '&raquo;' %>
+    <% else %>
+      <p><%= t('shared.admin.search.no_results') %></p>
+    <% end %>
+  <% else %>
+    <% if @testimonials.any? %>
+      <%= will_paginate @testimonials,
+                         :previous_label => '&laquo;',
+                         :next_label => '&raquo;' %>
+
+      <%= render :partial => "sortable_list" %>
+
+      <%= will_paginate @testimonials,
+                         :previous_label => '&laquo;',
+                         :next_label => '&raquo;' %>
+    <% else %>
+      <p>
+        <strong>
+          <%= t('.no_items_yet') %>
+        </strong>
+      </p>
+    <% end %>
+  <% end %>
+</div>
+<%= render :partial => "/shared/admin/make_sortable",
+            :locals => {
+              :tree => false
+            } if !searching? and Testimonial.count > 1 %>
