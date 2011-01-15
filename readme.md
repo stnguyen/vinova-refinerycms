@@ -1,6 +1,13 @@
 Vinova.sg using Rails 3 & RefineryCMS
 
 ============
+
+Dashboard: 
+URL: /refinery
+Admin account: admin/admin
+
+============
+
 Pros & cons (over the current vinova website)
 
 Pros:
@@ -19,7 +26,8 @@ Cons:
  - As a consequence of using the dashboard, batch adding/removing projects is no longer available.
 
 =============
-To be improved:
 
- - Views architecture (make views DRYer)
+Need to be improved:
+
+ - Improve views architecture (make views even DRYer, alter which code goes where)
  - Add recaptcha to the contact page.
