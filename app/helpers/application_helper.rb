@@ -18,11 +18,11 @@ module ApplicationHelper
   end
   
   def testimonials_array
-    a = []
-    Testimonial.all.each do |t|
-      a << "<quote><a href=\"#\">\"#{t.content}\"<br/>#{t.author}</a></quote>"
+    t = []
+    Testimonial.all.group_by(&:author).each do |author, testimonials|
+      t << "<quote><a href=\"#\">\"#{testimonials[rand(testimonials.count)].content}\"<br/>#{author}</a></quote>"
     end
-    a
+    t
   end
   
   def project_small_image_url(project)
